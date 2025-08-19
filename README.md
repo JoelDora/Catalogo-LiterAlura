@@ -1,36 +1,48 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+# LiterAlura – Catálogo de Libros (API + Java + H2)
 
-    <modelVersion>4.0.0</modelVersion>
+Este proyecto es un desafío de programación que consiste en crear un **catálogo de libros** usando **Java**, consumiendo una **API pública** (`https://gutendex.com/books`), deserializando la respuesta JSON con **Gson**, mostrando un menú interactivo en consola y **guardando los datos en una base de datos H2**.
 
-    <groupId>literalura</groupId>
-    <artifactId>catalogo-literalura</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>Catalogo LiterAlura</name>
+---
 
-    <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-    </properties>
+## 📌 Funcionalidades
 
-    <dependencies>
+- Obtener una lista de libros desde la API de Gutendex
+- Convertir la respuesta JSON en objetos Java
+- Mostrar un menú con opciones para el usuario
+- Filtrar libros por título o por autor
+- Guardar los libros obtenidos en una base de datos H2
+- Consultar los libros almacenados en la base de datos
 
-        <!-- Gson para deserializar JSON -->
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.10.1</version>
-        </dependency>
+---
 
-        <!-- H2 Database -->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>2.2.224</version>
-        </dependency>
+## 📦 Tecnologías utilizadas
 
-    </dependencies>
+| Herramienta | Uso |
+|-------------|------------------------------|
+| Java 21     | Lógica del catálogo          |
+| Maven       | Gestión de dependencias      |
+| Gson        | Deserialización de JSON      |
+| H2          | Base de datos embebida       |
 
-</project>
+---
+
+## ▶️ Cómo ejecutar
+
+1. Clonar el repositorio  
+2. Abrir el proyecto con IntelliJ  
+3. Ejecutar la clase **`App`**
+
+> Al iniciar, se mostrará un menú con las opciones disponibles.
+
+---
+
+## 📄 Ejemplo de menú
+
+=== Catálogo LiterAlura ===
+1. Mostrar todos los libros
+2. Mostrar todos los autores
+3. Buscar libro por título
+4. Buscar autor por nombre
+5. Guardar libros en la base de datos
+6. Mostrar libros guardados
+7. Salir
